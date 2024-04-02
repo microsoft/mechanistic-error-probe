@@ -1,5 +1,5 @@
 # Introduction 
-Source code for the paper Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models; Mert Yuksekgonul, Varun Chandrasekaran, Erik Jones, Suriya Gunasekar, Ranjita Naik, Hamid Palangi, Ece Kamar, Besmira Nushi. ICLR 2024.
+Source code for the ICLR 2024 paper: Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models; Mert Yuksekgonul, Varun Chandrasekaran, Erik Jones, Suriya Gunasekar, Ranjita Naik, Hamid Palangi, Ece Kamar, Besmira Nushi.
 
 # Getting Started
 The repository consists of:
@@ -67,6 +67,19 @@ which would save the resulting figures and probe results in the `./outputs` fold
 # Contact
 Mert Yuksekgonul (merty@stanford.edu)
 Besmira Nushi (besmira.nushi@microsoft.com)
+
+# Citation
+If you find this repository or the ideas therein useful, please consider citing our paper:
+```
+@inproceedings{
+yuksekgonul2024attention,
+title={Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models},
+author={Mert Yuksekgonul and Varun Chandrasekaran and Erik Jones and Suriya Gunasekar and Ranjita Naik and Hamid Palangi and Ece Kamar and Besmira Nushi},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=gfFVATffPd}
+}
+```
 
 # Contributing
 This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
