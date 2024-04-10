@@ -1,13 +1,6 @@
 # Introduction 
 Source code for the ICLR 2024 paper: Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models; Mert Yuksekgonul, Varun Chandrasekaran, Erik Jones, Suriya Gunasekar, Ranjita Naik, Hamid Palangi, Ece Kamar, Besmira Nushi.
 
-# Getting Started
-The repository consists of:
-- Scripts for collecting attention-based metrics from open source models from the Llama-2 family at inference time.
-- Scripts for using these metrics across a given dataset and training a simple linear probe that can predict whether the model will make a factual error.
-- A simplistic tool for visualizing model attention on a given instance.
-- Relevant factual knowledge data that was used in the paper for evaluation
-
 **Installation**:<br>
 The code is written in Python 3.11, and you can use `requirements.txt` to install the required packages. 
 ```bash
@@ -71,7 +64,9 @@ fig = plot_attention_flow(flow_matrix, token_labels, topk_prefix=24, figsize=(3,
 ```
 
 And here is the visualization:
+
 ![attention_flow3](./assets/sample_mc.png)
+
 ### Detecting Factual Errors
 Our probing experiments have 2 main steps:
 - Collect attention-based metrics for a given dataset. This is done using the `main_flow_collection.py`.
