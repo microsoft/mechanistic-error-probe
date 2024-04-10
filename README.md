@@ -52,6 +52,26 @@ fig
 which would produce the following visualization:
 ![attention_flow](./assets/sample_jordan.png)
 
+Here is another example to see the contrast with a different prompt where the model is incorrect (notice low attention on the constraint tokens):
+![attention_flow2](./assets/sample_bill_behr.png)
+
+Here is a multi-constraint example:
+```python
+prompt_info = {'prompt': "User: Is there a person who was born in the city of Portland OR and who is a Nobel Prize Winner\nAssistant: Yes, the person's name is",
+ 'constraints': [' who is a Nobel Prize Winner',
+  ' who was born in the city of Portland OR']}
+data = run_attention_monitor(prompt_info,
+                             model_wrapped)
+                             from viz_tools import plot_attention_flow
+# Collect the attention contribution data
+flow_matrix = data.all_token_contrib_norms[:, 1:data.num_prompt_tokens].T
+# Get token labels 
+token_labels = data.token_labels[1:data.num_prompt_tokens]
+fig = plot_attention_flow(flow_matrix, token_labels, topk_prefix=24, figsize=(3, 4), title=f"Model answer: {data['completion'].split('.')[0]}")
+```
+
+And here is the visualization:
+![attention_flow3](./assets/sample_mc.png)
 ### Detecting Factual Errors
 Our probing experiments have 2 main steps:
 - Collect attention-based metrics for a given dataset. This is done using the `main_flow_collection.py`.
