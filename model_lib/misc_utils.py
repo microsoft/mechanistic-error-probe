@@ -32,7 +32,7 @@ def cosine(A, B):
 def find_within_text(prompt, parts, tokenizer):
     """
     A function that identifies the indices of tokens of a part of the prompt. 
-    By default we use the first occurence. 
+    By default we use the first occurrence. 
     """
     prompt_tokens = tokenizer.encode(prompt)
     part_tokens = [tokenizer.encode(p)[2:] for p in parts]
